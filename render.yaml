@@ -1,0 +1,10 @@
+# For a standalone repository containing this folder's contents at its root.
+services:
+  - type: web
+    name: chatterbox-listening-demo
+    runtime: static
+    buildCommand: sh build.sh
+    staticPublishPath: ./dist
+    envVars:
+      - key: SKIP_INSTALL_DEPS
+        value: "true"
